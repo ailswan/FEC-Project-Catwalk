@@ -9,11 +9,13 @@ const apiCalls = {
   // },
 
   getProduct: (productId) => {
-    return axios.get(`http://3.21.164.220/products/${productId}`)
+    //return axios.get(`http://3.21.164.220/products/${productId}`)
+    return axios.get(`/api/products/${productId}`)
       .catch(err => console.log(err));
   },
   getProductStyles: (productId) => {
-    return axios.get(`http://3.21.164.220/products/${productId}/styles`)
+    return axios.get(`/api/products/${productId}/styles`)
+    //return axios.get(`http://3.21.164.220/products/${productId}/styles`)
       .catch(err => console.log(err));
   },
   addToCart: (skuID) => {

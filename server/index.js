@@ -2,6 +2,7 @@ const parser = require('body-parser');
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
+const router = require('./routes');
 
 const app = express();
 const port = 3000;
@@ -14,8 +15,11 @@ app.use(parser.urlencoded({ extended: true }));
 app.use(express.static('./client/dist'));
 app.use(cors());
 
+app.use('/api/products', router);
 app.get('/*', function (req, res) {
   res.sendFile(path.join(mainDir, 'client/dist', 'index.html'));
 });
+
+
 
 app.listen(port, () => console.log(`listening on port ${port}!`));

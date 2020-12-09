@@ -28,6 +28,7 @@ class Overview extends React.Component {
     apiCalls
       .getProductStyles(productId)
       .then(({ data }) => {
+        //console.log(data);
         const defaultStyleIndex = data.results.findIndex(
           (style) => style['default?'] === 1
         );
