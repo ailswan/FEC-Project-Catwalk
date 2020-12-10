@@ -21,7 +21,7 @@ CREATE TABLE `styles`(
 ALTER TABLE
     `styles` ADD PRIMARY KEY `style_id_primary`(`style_id`);
 ALTER TABLE 
-    `styles` ADD INDEX `product_id_index` (`product_id`)
+    `styles` ADD INDEX `product_id_index` (`product_id`);
 
 
 CREATE TABLE `photos`(
