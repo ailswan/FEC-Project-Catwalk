@@ -8,7 +8,7 @@ module.exports = {
   },
 
   get: function (req, res) {
-    console.log('product.get');
+    //console.log('product.get');
 
     const product_id = req.params.product_id;
 

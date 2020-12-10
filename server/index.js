@@ -7,7 +7,7 @@ const router = require('./routes');
 const app = express();
 const port = 3000;
 const mainDir = __dirname.substring(0, __dirname.length - 6);
-console.log(mainDir);
+//console.log(mainDir);
 
 // middleware
 app.use(parser.json());
