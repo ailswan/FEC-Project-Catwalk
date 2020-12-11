@@ -1,15 +1,15 @@
 var mysql = require('mysql');
 
 
-
-var con = mysql.createConnection({
+var con = mysql.createPool({
+  connectionLimit: 10,
   host: 'localhost',
   user: 'root',
   password: '123456',
   database: 'products'
 });
 
-con.connect(function(err) {
+con.getConnection(function(err) {
   if (err) {
     throw err;
   } else {

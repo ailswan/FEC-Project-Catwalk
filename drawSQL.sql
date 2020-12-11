@@ -58,4 +58,4 @@ CREATE TABLE `features`(
 ALTER TABLE
     `features` ADD PRIMARY KEY `feature_id_primary`(`feature_id`);
 ALTER TABLE
-    `product` ADD INDEX `product_id_index`(`product_id`);
+    `features` ADD INDEX `product_id_index`(`product_id`);

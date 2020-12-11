@@ -5,10 +5,10 @@ const photos = require('../models/photos');
 module.exports = {
 
   get: function (req, res) {
-    console.log('styles.get');
+    //console.log('styles.get');
 
     const product_id = req.params.product_id;
-    console.log(product_id);
+    //console.log(product_id);
 
     models.styles.get({product_id: product_id}, function(err, results) {
       if (err) { throw err; }
@@ -61,7 +61,7 @@ module.exports = {
         product.results.push(stylesMap[key]);
       }
 
-      console.log(product);
+      // console.log(product);
       
       res.json(product);
 
